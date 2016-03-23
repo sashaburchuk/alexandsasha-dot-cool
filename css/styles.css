@@ -2,24 +2,50 @@ body {
   margin: 0;
   font-family: 'EB Garamond', serif;
   font-size: 24px;
-  background:  #CAD4DD;
+  background:  #fff url('../img/sashaandalexhawaii.jpg') center top no-repeat fixed;
+  background-size: 100% auto;
+  padding-top: 51%;
 }
 
-h1 {
+/*h1 {
   background: url('../img/sashaalexheading.png') 0 0 no-repeat;
   background-size: contain;
   width: 400px;
   height: 62px;
   margin: 48px auto;
   text-indent: -9999px;
+}*/
+
+h1, h2, h3 {
+  font-weight: 400;
+  text-align: center;
 }
 
-img {
-  width: 100%;
-  height: auto;
+h1 {
+  font-size: 80px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 50px;
+  margin: -5px 0 45px 0;
+}
+
+h3 {
+  font-size: 32px;
+  font-style: italic;
+  margin: 0 0 24px 0;
+}
+
+p {
+  line-height: 1.4em;
+  text-align: center;
+  margin: 10px auto 30px auto;
+  max-width: 500px;
 }
 
 a {
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.12);
   color: black;
   text-decoration: none;
 }
@@ -29,16 +55,90 @@ a:visited {
 }
 
 a:hover {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
   color: black;
-  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.full-width {
+  border-top: 2px solid rgba(0, 0, 0, 0.03);
+  width: 100%;
 }
 
 .container {
+  /* IE10+ */ 
+  background-image: -ms-linear-gradient(top, #CAD4DD 0%, #ffffff 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(top, #CAD4DD 0%, #ffffff 100%);
+
+  /* Opera */ 
+  background-image: -o-linear-gradient(top, #CAD4DD 0%, #ffffff 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #CAD4DD), color-stop(100, #ffffff));
+
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(top, #CAD4DD 0%, #ffffff 100%);
+
+  /* W3C Markup */ 
+  background-image: linear-gradient(to bottom, #CAD4DD 0%, #ffffff 100%);
+
   width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
 }
 
-.being-there {
-  margin-bottom: 48px;
+.content {
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 60px 20px;
+}
+
+.content p:first-child {
+  margin-top: 0;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.map-embed {
+  border: none;
+  height: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 35px;
+    margin: -5px 0 30px 0;
+  }
+
+  .content {
+    padding: 35px 15px;
+  }
 }
