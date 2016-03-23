@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  font-size: 24px;
+  background:  #CAD4DD;
+}
+
+h1 {
+  background: url('../img/sashaalexheading.png') 0 0 no-repeat;
+  background-size: contain;
+  width: 400px;
+  height: 62px;
+  margin: 48px auto;
+  text-indent: -9999px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.being-there {
+  margin-bottom: 48px;
+}
