@@ -7,14 +7,9 @@ body {
   padding-top: 51%;
 }
 
-/*h1 {
-  background: url('../img/sashaalexheading.png') 0 0 no-repeat;
-  background-size: contain;
-  width: 400px;
-  height: 62px;
-  margin: 48px auto;
-  text-indent: -9999px;
-}*/
+body.hoverable .map-embed {
+  pointer-events: all;
+}
 
 h1, h2, h3 {
   font-weight: 400;
@@ -115,10 +110,15 @@ ul li {
   margin-bottom: 0;
 }
 
+.jokes a {
+  border-bottom: none;
+}
+
 .map-embed {
   border: none;
   height: 400px;
   margin: 0 auto;
+  pointer-events: none;
   width: 100%;
 }
 

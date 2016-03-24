@@ -22,7 +22,7 @@
   <title>Sasha &amp; Alex Get Married</title>
 </head>
 
-<body>
+<body class="hoverable">
   <div class="container">
 
     <div class="content">
@@ -30,7 +30,10 @@
       <h2>October 1st, 2016</h2>
       
       <p>We hope you can join us at Yale Union to celebrate love and friendship on October 1, 2016 at 7:00 p.m.</p>
-      <p>Light hors d'ouerves will precede a brief ceremony, then dancing all night.</p>
+      <p>Light hors d'ouerves will precede a brief ceremony, then 
+        <span class="jokes">
+        <a href="https://www.youtube.com/watch?v=mOYZaiDZ7BM" target="_blank">d</a><a href="https://www.youtube.com/watch?v=Qkuu0Lwb5EM" target="_blank">a</a><a href="https://www.youtube.com/watch?v=wO89_H7GqaQ" target="_blank">n</a><a href="https://www.youtube.com/watch?v=zm28EEeyLek" target="_blank">c</a><a href="https://www.youtube.com/watch?v=1MQUleX1PeA" target="_blank">i</a><a href="https://www.youtube.com/watch?v=qq09UkPRdFY" target="_blank">n</a><a href="https://www.youtube.com/watch?v=2GZbaXdK8Js" target="_blank">g</a>
+        </span> all night.</p>
       <p>Please <a href="https://docs.google.com/forms/d/1w3BtnF07R-hkiccWgf22tbVvMkNcs812mgXgBDHnQK8" target="_blank">RSVP here</a> as soon as possible.</p>
     </div>
 
@@ -67,6 +70,7 @@
           <li><a href="http://jupiterhotel.com/" target="_blank">Jupiter</a></li>
           <li><a href="http://www.mcmenamins.com/KennedySchool" target="_blank">Kennedy School</a></li>
           <li><a href="http://www.palmsmotel.com/" target="_blank">Palms Motel</a></li>
+          <li><a href="http://www.thenines.com/" target="_blank">The Nines</a></li>
         </ul>
       </div>
     </div>
@@ -79,5 +83,38 @@
     </div>
 
   </div>
+  
+  <script>
+    // Used to track the enabling of hover effects
+    var enableTimer = 0;
+
+    /*
+    * Listen for a scroll and use that to remove
+    * the possibility of hover effects
+    */
+    window.addEventListener('scroll', function() {
+      clearTimeout(enableTimer);
+      removeHoverClass();
+
+      // enable after 1 second, choose your own value here!
+      enableTimer = setTimeout(addHoverClass, 500);
+    }, false);
+
+    /**
+     * Removes the hover class from the body. Hover styles
+     * are reliant on this class being present
+     */
+    function removeHoverClass() {
+      document.body.classList.remove('hoverable');
+    }
+
+    /**
+     * Adds the hover class to the body. Hover styles
+     * are reliant on this class being present
+     */
+    function addHoverClass() {
+      document.body.classList.add('hoverable');
+    }
+  </script>
 </body>
 </html>
