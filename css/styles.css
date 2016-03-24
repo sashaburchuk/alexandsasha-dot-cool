@@ -2,7 +2,8 @@ body {
   margin: 0;
   font-family: 'EB Garamond', serif;
   font-size: 24px;
-  background:  #fff url('../img/sashaandalexhawaii.jpg') center top no-repeat fixed;
+  background:  #fff url('../img/sasha-alex-stonehenge.jpg') center top no-repeat fixed;
+  opacity: 0.9;
   background-size: 100% auto;
   padding-top: 51%;
 }
