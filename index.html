@@ -23,6 +23,14 @@
 </head>
 
 <body class="hoverable">
+
+  <div class="down" aria-role="hidden">
+    <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+      <path d="M0-.75h24v24H0z" fill="none"/>
+    </svg>
+  </div>
+
   <div class="container">
 
     <div class="content">
@@ -78,40 +86,26 @@
     <div class="full-width places">
       <div class="content">
         <h3>Questions?</h3>
-        <p>Email <a href="mailto:sashamonya@gmail.com">Sasha</a> or <a href="mailto:alexmahan@gmail.com">Alex</a>.
+        <p>Email <a href="mailto:sashamonya@gmail.com">Sasha</a> or <a href="mailto:alexmahan@gmail.com">Alex</a>.</p>
+        <p>Photo by <a href="http://www.laurejoliet.com/" target="_blank">Laure Juliet</a></p>
       </div>
     </div>
 
   </div>
   
   <script>
-    // Used to track the enabling of hover effects
     var enableTimer = 0;
 
-    /*
-    * Listen for a scroll and use that to remove
-    * the possibility of hover effects
-    */
     window.addEventListener('scroll', function() {
       clearTimeout(enableTimer);
       removeHoverClass();
-
-      // enable after 1 second, choose your own value here!
       enableTimer = setTimeout(addHoverClass, 500);
     }, false);
 
-    /**
-     * Removes the hover class from the body. Hover styles
-     * are reliant on this class being present
-     */
     function removeHoverClass() {
       document.body.classList.remove('hoverable');
     }
 
-    /**
-     * Adds the hover class to the body. Hover styles
-     * are reliant on this class being present
-     */
     function addHoverClass() {
       document.body.classList.add('hoverable');
     }
