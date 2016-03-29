@@ -1,5 +1,15 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-color: #fff;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: 'EB Garamond', serif;
   font-size: 24px;
@@ -81,10 +91,6 @@ ul li {
   z-index: 1;
   animation: animationFrames ease-out 2.5s;
   animation-iteration-count: infinite;
-  -webkit-animation: animationFrames ease-out 2.5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation: animationFrames ease-out 2.5s;
-  -moz-animation-iteration-count: infinite;
 }
 
 .down svg {
@@ -103,32 +109,6 @@ ul li {
     opacity: 0.6;
   }
 }
-
-@-moz-keyframes animationFrames{
-  0% {
-    -moz-transform: opacity: 0.6;
-  }
-  50% {
-    -moz-transform-opacity: 1;
-  }
-  100% {
-    -moz-transform: opacity: 0.6;
-  }
-}
-
-@-webkit-keyframes animationFrames {
-  0% {
-    -webkit-transform: opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: opacity: 1;
-  }
-  100% {
-    -webkit-transform: opacity: 0.6;
-  }
-}
-
-
 
 .container {
   /* IE10+ */ 
@@ -219,31 +199,35 @@ ul li {
 
 @media screen and (min-width: 1200px) {
   body {
-    background: #fff url('../img/stonehenge-large.jpg') center center no-repeat fixed;
-    background-size: cover;
+    background-image: url('../img/stonehenge-large.jpg');
   }
 }
 
 @media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5),
        screen and (min-width: 1200px) and (min-resolution: 150dpi) {
   body {
-    background: #fff url('../img/stonehenge-extra-large.jpg') center center no-repeat fixed;
-    background-size: cover;
+    background-image: url('../img/stonehenge-extra-large.jpg');
   }    
 }
 
 @media screen and (max-width: 1199px) {
   body {
-    background: #fff url('../img/stonehenge-medium.jpg') center center no-repeat fixed;
-    background-size: cover;
+    background-image: url('../img/stonehenge-medium.jpg');
+  }
+  body.touch {
+    background-attachment: scroll;
   }
 }
 
 @media screen and (max-width: 600px) {
   body {
-    background: #fff url('../img/stonehenge-small.jpg') center top no-repeat fixed;
+    background-image: url('../img/stonehenge-small.jpg');
+    background-position: center top;
     background-size: auto 70%;
     font-size: 20px;
+  }
+  body.touch {
+    background-attachment: scroll;
   }
 
   .down {
@@ -257,7 +241,7 @@ ul li {
 
   h2 {
     font-size: 35px;
-    margin: -5px 0 30px 0;
+    margin: -5px 0 20px 0;
   }
 
   .container {
@@ -266,6 +250,14 @@ ul li {
 
   .content {
     padding: 35px 15px;
+  }
+
+  .content.-intro {
+    padding-top: 20px;
+  }
+
+  p { 
+    margin-bottom: 25px;
   }
 
   .-logo {

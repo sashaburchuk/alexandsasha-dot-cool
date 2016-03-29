@@ -36,7 +36,7 @@
 
     <div class="container">
 
-      <div class="content">
+      <div class="content -intro">
         <h1>Sasha &amp; Alex</h1>
         <h2>October 1st, 2016</h2>
         
@@ -154,6 +154,10 @@ while(x=eval(x));
     </div>
     
     <script type="text/javascript">
+      if ('ontouchstart' in window) {
+        document.body.classList.add('touch');
+      }
+      
       var enableTimer = 0;
 
       window.addEventListener('scroll', function() {
